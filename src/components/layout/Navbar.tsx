@@ -95,10 +95,9 @@ export default function Navbar() {
         border-b border-gray-900 bg-[#0f0f0f] z-[1000]
         transition-transform duration-300
         ${atTop
-          ? "relative translate-y-0" 
-          : `fixed top-0 left-0 right-0 ${
-              showNav ? "translate-y-0" : "-translate-y-full"
-            }`
+          ? "relative translate-y-0"
+          : `fixed top-0 left-0 right-0 ${showNav ? "translate-y-0" : "-translate-y-full"
+          }`
         }
       `}
     >
@@ -119,15 +118,13 @@ export default function Navbar() {
             aria-expanded={open}
             aria-controls="courses-mega"
             onClick={() => setOpen((v) => !v)}
-            className={`flex items-center gap-2 leading-none ${
-              isCourses ? "text-white font-semibold" : ""
-            }`}
+            className={`flex items-center gap-2 leading-none ${isCourses ? "text-white font-semibold" : ""
+              }`}
           >
             <span className={underlineTextClass}>Courses</span>
             <svg
-              className={`h-4 w-4 transition-transform ${
-                open ? "rotate-180" : ""
-              }`}
+              className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""
+                }`}
               viewBox="0 0 24 24"
               fill="#9f9f9f"
             >

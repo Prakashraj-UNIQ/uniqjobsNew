@@ -98,15 +98,12 @@ export default function SyllabusSection({ MODULES }: { MODULES: Module[] }) {
                                             top: `calc(var(--stack-top) + ${((idx) * (idx + 1)) / 2} * var(--stack-unit))`,
                                         } as React.CSSProperties}
                                         className="sticky"
-                                        
+
                                     >
                                         {/* INNER animated panel */}
                                         <div
                                             data-module-inner
-                                            className="translate-y-6 opacity-0 will-change-transform transition-all duration-700
-                                 rounded-2xl border border-gray-500/20 bg-white/5 p-5 shadow-[0_6px_24px_rgba(0,0,0,0.35)]
-                                 backdrop-blur hover:border-gray-500/40"
-                                        >
+                                            className="translate-y-6 opacity-0 will-change-transform transition-all duration-700 rounded-2xl border border-gray-500/20 bg-white/5 p-5 shadow-[0_6px_24px_rgba(0,0,0,0.35)] backdrop-blur hover:border-gray-500/40">
                                             <div className="mb-2 flex items-center justify-between">
                                                 <h3 className="text-lg font-semibold text-white">
                                                     {m.title} <span className="text-white/60">· {m.subtitle}</span>

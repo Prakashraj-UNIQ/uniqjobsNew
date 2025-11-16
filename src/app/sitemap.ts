@@ -42,7 +42,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   );
 
   const now = new Date();
-  const postsRes = await listBlogs(1, 50);        
+  const postsRes = await listBlogs(1, 50); 
+  if (!Array.isArray(postsRes.posts)) return [];       
   const posts = postsRes.posts ?? [];
   const cats = await listCategories();
   const tags = await listTags();

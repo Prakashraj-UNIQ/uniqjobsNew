@@ -49,14 +49,14 @@
             "category": "popular"
         },
         {
-            "slug": "it-production-support",
+            "slug": "production-support",
             "title": "IT Production Support",
             "description": "Great for those looking to build stability before switching roles",
             "avgSalary": "₹4L – ₹10L PA",
             "icon": "/svg/courses/production.svg",
             "cta": {
                 "label": "Read More",
-                "href": "/courses/it-production-support"
+                "href": "/courses/production-support"
             },
             "category": "popular"
         },

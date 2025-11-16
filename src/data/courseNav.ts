@@ -8,6 +8,7 @@ export const COURSE_LOCATIONS: Record<string, string[]> = {
   "generative-ai": ["Chennai","Bangalore","Coimbatore","Madurai","Trichy","Puducherry","Tirunelveli","Salem"],
   "mlops": ["Chennai","Bangalore","Coimbatore","Trichy","Puducherry","Madurai","Tirunelveli","Salem"],
   "data-science": ["Chennai","Bangalore","Coimbatore","Madurai","Trichy","Puducherry","Tirunelveli","Salem"],
+  "data-engineering": ["Chennai","Bangalore","Coimbatore","Madurai","Trichy","Puducherry","Tirunelveli","Salem"],
   "data-analysis": ["Chennai","Bangalore","Coimbatore","Madurai","Trichy","Puducherry","Tirunelveli","Salem"],
   "power-bi": ["Chennai","Bangalore","Coimbatore","Madurai","Trichy","Puducherry","Salem","Tirunelveli"],
   "software-testing": ["Chennai","Bangalore","Coimbatore","Madurai","Trichy","Puducherry","Salem","Tirunelveli"],

@@ -8,7 +8,7 @@ type courseDetails = {
 }
 
 type location = {
-    data: courseDetails[]
+    data?: courseDetails[]
     city: string
 }
 
@@ -23,7 +23,7 @@ export default function LocationCourses({ data, city }: location) {
 
                 {/* Course Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 px-2 sm:px-10 xl:px-15">
-                    {data.map((course, index) => (
+                    {data?.map((course, index) => (
                         <div
                             key={index}
                             className="p-4 sm:p-8 flex flex-col items-center text-center"
