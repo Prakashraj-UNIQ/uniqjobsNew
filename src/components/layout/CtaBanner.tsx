@@ -27,7 +27,7 @@ export default function ctaBanner() {
                         Learn from industry experts with real-time project training and 100% placement assistance. Join UniqJobs, Chennai’s trusted IT training institute, and start your career today.
                     </p>
                     <Button
-                        href="contact-us"
+                        href="/contact-us"
                     >
                         Explore Now
                     </Button>

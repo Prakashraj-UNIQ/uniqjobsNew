@@ -36,8 +36,8 @@ export default async function BlogsPage() {
           "publisher": { "@type": "Organization", "name": "UniqJobs", "url": "https://uniqjobs.co.in" }
         })}
       </Script>
-      
-      <BlogList blogs={data.data} crumb="All Blogs"/>
+
+      <BlogList blogs={data.data} crumb="All Blogs" />
     </>
   );
 }

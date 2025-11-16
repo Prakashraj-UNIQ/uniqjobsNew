@@ -9,10 +9,10 @@ const ContactSection = () => {
     >
       <div className="mx-auto w-full">
         <div className="mb-8">
-          <h1 className="text-center px-2 text-2xl sm:text-4xl lg:text-4xl mt-6 lg:mt-0 xl:text-5xl text-black font-primary font-black">
+          <h2 className="text-center px-2 text-2xl sm:text-4xl lg:text-4xl mt-6 lg:mt-0 xl:text-5xl text-black font-primary font-black">
             Kickstart Your IT Career Today
             <span className=""> Let’s Talk!</span>
-          </h1>
+          </h2>
           <p className="text-center mt-4 md:text-lg">
             We are here to answer all the queries you might have. Please select
             the segment we can help you with.

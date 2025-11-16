@@ -13,9 +13,9 @@ const seoImg = "/images/clsBala.webp"
 export const metadata: Metadata = {
   title: seoTitle,
   description: seoDescription,
-  alternates : { canonical: seoUrl },
-  openGraph: { title : seoTitle, description :seoDescription, url : seoUrl, images: [{ url: seoImg }] },
-    twitter: { card: "summary_large_image", title : seoTitle, description : seoDescription, images: [seoImg] },
+  alternates: { canonical: seoUrl },
+  openGraph: { title: seoTitle, description: seoDescription, url: seoUrl, images: [{ url: seoImg }] },
+  twitter: { card: "summary_large_image", title: seoTitle, description: seoDescription, images: [seoImg] },
 };
 
 export default async function CoursesIndex() {

@@ -18,16 +18,38 @@ export const metadata: Metadata = {
 export default function StudentReviewsPage() {
   return (
     <>
-      <Script id="ld-course" type="application/ld+json" strategy="afterInteractive">
+      <Script
+        id="ld-students-review"
+        type="application/ld+json"
+        strategy="afterInteractive"
+      >
         {JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "students-review",
-          "name": seoTitle,
-          "description": seoDescription,
-          "provider": { "@type": "Organization", "name": "UniqJobs", "url": "https://uniqjobs.co.in" },
-          "url": `https://uniqjobs.co.in/placements/students-review`
+          "@type": "CollectionPage",
+          "name": "UniqJobs Student Reviews",
+          "url": "https://uniqjobs.co.in/placements/students-review",
+          "description":
+            "Read real reviews and success stories from UniqJobs students placed in IT companies.",
+          "about": {
+            "@type": "Organization",
+            "name": "UniqJobs",
+            "url": "https://uniqjobs.co.in"
+          },
+          "mainEntity": {
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            "name": "UniqJobs",
+            "url": "https://uniqjobs.co.in",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "bestRating": "5",
+              "ratingCount": "1540"
+            }
+          }
         })}
       </Script>
+
       <main className="bg-black min-h-screen">
         <div className="pt-25 md:pt-10 pb-4 text-center text-white">
           <h1 className="text-3xl md:text-4xl font-bold">
