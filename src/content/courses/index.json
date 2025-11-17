@@ -7,7 +7,7 @@
             "avgSalary": "₹6L - ₹15L PA",
             "icon": "/svg/courses/java.svg",
             "cta": {
-                "label": "Read More",
+                "label": "Learn More",
                 "href": "/courses/java-fullstack"
             },
             "category": "popular"
@@ -19,7 +19,7 @@
             "avgSalary": "₹5L – ₹12L PA",
             "icon": "/svg/courses/python.svg",
             "cta": {
-                "label": "Read More",
+                "label": "Learn More",
                 "href": "/courses/python-fullstack"
             },
             "category": "popular"
@@ -31,7 +31,7 @@
             "avgSalary": "₹6L – ₹14L PA",
             "icon": "/svg/courses/dotnet.svg",
             "cta": {
-                "label": "Read More",
+                "label": "Learn More",
                 "href": "/courses/dotnet-fullstack"
             },
             "category": "popular"
@@ -43,7 +43,7 @@
             "avgSalary": "₹5L – ₹12L PA",
             "icon": "/svg/courses/dataEngineering.svg",
             "cta": {
-                "label": "Read More",
+                "label": "Learn More",
                 "href": "/courses/data-engineering"
             },
             "category": "popular"
@@ -55,7 +55,7 @@
             "avgSalary": "₹4L – ₹10L PA",
             "icon": "/svg/courses/production.svg",
             "cta": {
-                "label": "Read More",
+                "label": "Learn More",
                 "href": "/courses/production-support"
             },
             "category": "popular"
@@ -67,7 +67,7 @@
             "avgSalary": "₹4L – ₹10L PA",
             "icon": "/svg/courses/devops.svg",
             "cta": {
-                "label": "Read More",
+                "label": "Learn More",
                 "href": "/courses/devops-aws"
             },
             "category": "popular"
@@ -79,7 +79,7 @@
             "avgSalary": "₹5L – ₹12L PA",
             "icon": "/svg/courses/cyber.svg",
             "cta": {
-                "label": "Read More",
+                "label": "Learn More",
                 "href": "/courses/cyber-security"
             },
             "category": "trending"
@@ -91,7 +91,7 @@
             "avgSalary": "₹6L – ₹15L PA",
             "icon": "/svg/courses/ai.svg",
             "cta": {
-                "label": "Read More",
+                "label": "Learn More",
                 "href": "/courses/generative-ai"
             },
             "category": "trending"
@@ -103,7 +103,7 @@
             "avgSalary": "₹6L – ₹14L PA",
             "icon": "/svg/courses/mlops.svg",
             "cta": {
-                "label": "Read More",
+                "label": "Learn More",
                 "href": "/courses/mlops"
             },
             "category": "trending"
@@ -115,7 +115,7 @@
             "avgSalary": "₹5L – ₹12L PA",
             "icon": "/svg/courses/dataScience.svg",
             "cta": {
-                "label": "Read More",
+                "label": "Learn More",
                 "href": "/courses/data-science"
             },
             "category": "trending"
@@ -127,7 +127,7 @@
             "avgSalary": "₹4L – ₹10L PA",
             "icon": "/svg/courses/dataAnalysis.svg",
             "cta": {
-                "label": "Read More",
+                "label": "Learn More",
                 "href": "/courses/data-analysis"
             },
             "category": "trending"
@@ -139,7 +139,7 @@
             "avgSalary": "₹4L – ₹11L PA",
             "icon": "/svg/courses/powerbi.svg",
             "cta": {
-                "label": "Read More",
+                "label": "Learn More",
                 "href": "/courses/power-bi"
             },
             "category": "trending"
@@ -151,7 +151,7 @@
             "avgSalary": "₹3L – ₹8L PA",
             "icon": "/svg/courses/marketing.svg",
             "cta": {
-                "label": "Read More",
+                "label": "Learn More",
                 "href": "/courses/digital-marketing"
             },
             "category": "new"
@@ -163,7 +163,7 @@
             "avgSalary": "₹4L – ₹10L PA",
             "icon": "/svg/courses/cloud.svg",
             "cta": {
-                "label": "Read More",
+                "label": "Learn More",
                 "href": "/courses/cloud-fundamentals"
             },
             "category": "new"
@@ -175,7 +175,7 @@
             "avgSalary": "₹4L – ₹10L PA",
             "icon": "/svg/courses/sqlunix.svg",
             "cta": {
-                "label": "Read More",
+                "label": "Learn More",
                 "href": "/courses/sql-unix"
             },
             "category": "new"

@@ -3,13 +3,16 @@ import { Metadata } from "next";
 import Script from "next/script";
 
 const seoTitle = "Student's Review & Placed Candidates | uniq jobs"
-const seoDescription = "Watch genuine student reviews of Uniq Jobs and discover how our training programs have helped learners build strong careers in IT."
+const seoDescription = "Watch genuine students review of Uniq Jobs and discover how our training programs have helped learners build strong careers in IT."
 const seoUrl = "https://uniqjobs.co.in/courses/"
 const seoImg = "/images/clsBala.webp"
+const keyWords = ["students review, Non-IT, Freshers, IT career, placements, careers"]
+
 
 export const metadata: Metadata = {
   title: seoTitle,
   description: seoDescription,
+  keywords:keyWords,
   alternates: { canonical: seoUrl },
   openGraph: { title: seoTitle, description: seoDescription, url: seoUrl, images: [{ url: seoImg }] },
   twitter: { card: "summary_large_image", title: seoTitle, description: seoDescription, images: [seoImg] },

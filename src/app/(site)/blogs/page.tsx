@@ -9,10 +9,12 @@ export async function generateMetadata() {
   const description = "Explore the latest IT career tips and tricks from UniqJobs experts. Updated weekly with real industry guidance.";
   const url = "https://uniqjobs.co.in/blogs";
   const image = "/images/clsBala.webp";
+  const keyWords = ["IT career tips, IT career, experts, guidance, blogs, blog"];
 
   return {
     title,
     description,
+    keyWords,
     url,
     alternates: { canonical: url },
     openGraph: { title, description, url, type: "website", images: [{ url: image }] },

@@ -53,7 +53,7 @@ export default function Banner() {
                 <CountUpBox value={5000} label="Non-IT" />
                 <CountUpBox value={2240} label="Career Gap" />
                 <CountUpBox value={1980} label="Other Deparment" />
-                <CountUpBox value={1330} label="Fresher's" />
+                <CountUpBox value={1330} label="Freshers" />
             </div>
         </div>
     );

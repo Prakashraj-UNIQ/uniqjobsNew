@@ -13,12 +13,14 @@ const seoTitle = "Best Software Training with Placement Institute in chennai | U
 const seoDescription = "Start your IT career with UniqJobs in Chennai. Get real-time project training from industry experts and benefit from 100% placement assistance."
 const seoUrl = "https://uniqjobs.co.in/"
 const seoImg = "/images/cta-cover.webp"
+const keyWords = ["Career gap, Non-IT, Freshers, IT career, placements"]
 
 export const metadata: Metadata = {
   title: seoTitle,
   description: seoDescription,
+  keywords:keyWords,
   alternates: { canonical: seoUrl },
-  openGraph: { title: seoTitle, description: seoDescription, url: seoUrl, images: [{ url: seoImg }] },
+  openGraph: { title: seoTitle, description: seoDescription, url: seoUrl, images: [{ url: seoImg }], type :"website" },
   twitter: { card: "summary_large_image", title: seoTitle, description: seoDescription, images: [seoImg] },
 };
 

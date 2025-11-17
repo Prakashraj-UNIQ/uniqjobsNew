@@ -3,9 +3,19 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 
 
+const seoTitle = "Contact Us | UniqJobs"
+const seoDescription = "Start your IT career with UniqJobs in Chennai. Get real-time project training from industry experts and benefit from 100% placement assistance."
+const seoUrl = "https://uniqjobs.co.in/contact-us"
+const seoImg = "/images/clsBala.webp"
+const keyWords = [" Non-IT, Freshers, IT career, placements, careers, industry experts, software Training, branch"]
+
 export const metadata: Metadata = {
-  title: 'Contact Us | UniqJobs',
-  description: 'Start your IT career with UniqJobs in Chennai. Get real-time project training from industry experts and benefit from 100% placement assistance.',
+  title: seoTitle,
+  description: seoDescription,
+  keywords:keyWords,
+  alternates: { canonical: seoUrl },
+  openGraph: { title: seoTitle, description: seoDescription, url: seoUrl, images: [{ url: seoImg }] },
+  twitter: { card: "summary_large_image", title: seoTitle, description: seoDescription, images: [seoImg] },
 };
 
 const page = () => {
