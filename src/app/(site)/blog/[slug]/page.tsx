@@ -37,18 +37,23 @@ interface Blog {
 }
 
 export const revalidate = 300;
+const MAX_DESCRIPTION_LENGTH = 160;
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
 
     const IMG_BASE = "https://uniqjobs.co.in/blog_images/";
 
+
     const { slug } = await params;
     const blog = await getBlog(slug || "");
     const blogDetails: Blog = blog.data;
+    const originalDescription = blogDetails.description || "";
     const src = blogDetails.image ? `${IMG_BASE}/${encodeURIComponent(blogDetails.image)}` : "";
-
+    const description =
+        originalDescription.length > MAX_DESCRIPTION_LENGTH
+            ? originalDescription.slice(0, MAX_DESCRIPTION_LENGTH).trimEnd() + "..."
+            : originalDescription;
     const title = blogDetails.title;
-    const description = blogDetails.description;
     const url = `https://uniqjobs.co.in/blog/${slug}`;
     const image = src;
 

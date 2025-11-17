@@ -14,7 +14,7 @@ export const COURSE_LOCATIONS: Record<string, string[]> = {
   "software-testing": ["Chennai","Bangalore","Coimbatore","Madurai","Trichy","Puducherry","Salem","Tirunelveli"],
   "sql-unix": ["Chennai","Bangalore","Coimbatore","Madurai","Trichy","Puducherry","Tirunelveli","Salem"],
   "digital-marketing": ["Chennai","Bangalore","Coimbatore","Madurai","Trichy","Puducherry","Tirunelveli","Salem"],
-  "devops": ["Chennai","Bangalore","Coimbatore","Madurai","Trichy","Puducherry","Tirunelveli","Salem"],
+  "devops-aws": ["Chennai","Bangalore","Coimbatore","Madurai","Trichy","Puducherry","Tirunelveli","Salem"],
   "cloud-fundamentals": ["Chennai","Bangalore","Coimbatore","Madurai","Trichy","Puducherry","Tirunelveli","Salem"],
   "production-support": ["Chennai","Bangalore","Coimbatore","Madurai","Trichy","Puducherry","Tirunelveli","Salem"],
 };

@@ -12,7 +12,7 @@ function MobileCard({ item, playingId, onPlay }: { item: ShortItem; playingId?: 
             type="button"
             onClick={() => onPlay(item.id)}
             aria-label={`Play ${item.title ?? item.name ?? "short | uniq jobs"}`}
-            className="relative w-[180px] aspect-[9/16] rounded-xl overflow-hidden bg-black border border-white/10 shadow-md focus:outline-none focus:ring-2 focus:ring-primary-800"
+            className="relative w-full sm:w-[280px] md:w-[280px] aspect-[9/16] rounded-xl overflow-hidden bg-black border border-white/10 shadow-md focus:outline-none focus:ring-2 focus:ring-primary-800"
         >
             {isPlaying ? (
                 <iframe
@@ -48,7 +48,7 @@ export default function ShortsMobile({ items, buttonAccess = true }: { items: Sh
     return (
         <div className="relative px-3">
         
-            <div className="mx-auto max-w-[1100px] grid grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
+            <div className="mx-auto max-w-[1100px] grid sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
                 {items.map((it) => (
                     <MobileCard key={it.id} item={it} playingId={playingId} onPlay={setPlayingId} />
                 ))}

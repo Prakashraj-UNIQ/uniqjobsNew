@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import CtaBanner from "@/components/layout/CtaBanner";
 import Footer from "@/components/layout/Footer";
 import { Metadata } from "next";
+import ScrollToTop from "@/components/common/ScrollToTop"
 
 const outFit = Outfit({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
         <Header />
         <ThemeProvider>
           <Navbar />
+          <ScrollToTop/>
         </ThemeProvider>
         {children}
         <CtaBanner />

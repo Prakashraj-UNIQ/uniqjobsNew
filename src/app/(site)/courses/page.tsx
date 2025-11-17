@@ -23,7 +23,7 @@ export default async function CoursesIndex() {
   const jsonLd = courseListJsonLd(list);
 
   return (
-    <main className="bg-[#f2f2f2] py-10 px-2 sm:px-10 lg:px-20">
+    <main className="bg-[#f2f2f2] mt-15 sm:mt-0 py-10 px-2 sm:px-10 lg:px-20">
       <h1 className="px-4 text-black text-3xl lg:text-5xl text-center fold-primary font-black pb-10">
         What You’ll <span className="">Learn with Us?</span>
       </h1>
