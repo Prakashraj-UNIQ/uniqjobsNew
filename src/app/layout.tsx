@@ -13,10 +13,9 @@ const outFit = Outfit({
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-export const metadata:Metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL("https://uniqjobs.co.in")
 };
-
 
 export default function RootLayout({
   children,
@@ -25,7 +24,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <meta name="robots" content="noindex, nofollow" />
       <link rel="icon" href="/uniqjobs.svg" type="image/svg+xml" />
       <link rel="preconnect" href="https://i.ytimg.com" />
       <link rel="preconnect" href="https://www.youtube-nocookie.com" />
@@ -37,7 +35,7 @@ export default function RootLayout({
         <Header />
         <ThemeProvider>
           <Navbar />
-          <ScrollToTop/>
+          <ScrollToTop />
         </ThemeProvider>
         {children}
         <CtaBanner />
