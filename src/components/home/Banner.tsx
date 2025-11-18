@@ -11,11 +11,12 @@ export default function Banner() {
                 <div className="absolute inset-0 -z-9">
                     <Image
                         src="/images/cta-cover.webp"
-                        alt="Banner Background"
+                        alt="UniqJobs - Software Training Institute"
                         fill
-                        className="object-cover object-[center_40%] opacity-100"
-                        priority
+                        className="object-cover object-[center_40%]"
+                        fetchPriority='high'
                         sizes="100vw"
+                        loading='eager'
                     />
                 </div>
 
