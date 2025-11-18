@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://uniqjobs.co.in/sitemap.xml",
+    sitemap: "https://www.uniqjobs.co.in/sitemap.xml",
   };
 }

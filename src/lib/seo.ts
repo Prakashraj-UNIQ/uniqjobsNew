@@ -1,7 +1,7 @@
 // lib/seo.ts
 export const SITE = {
   name: "UniqJobs",
-  baseUrl: "https://uniqjobs.co.in",
+  baseUrl: "https://www.uniqjobs.co.in",
   defaultOg: "/images/og-default.png",
 };
 

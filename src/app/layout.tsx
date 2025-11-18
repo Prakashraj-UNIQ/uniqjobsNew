@@ -14,7 +14,7 @@ const outFit = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://uniqjobs.co.in")
+  metadataBase: new URL("https://www.uniqjobs.co.in")
 };
 
 export default function RootLayout({

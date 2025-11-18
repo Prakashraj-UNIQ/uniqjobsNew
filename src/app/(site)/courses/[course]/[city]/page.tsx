@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ course: s
 
     const title = citySEO?.title ?? `${detail?.title} in ${cityName} | UniqJobs`;
     const description = citySEO?.description ?? `${detail?.subtitle} — Available in ${cityName}.`;
-    const url = `https://uniqjobs.co.in/courses/${course}/${city}`;
+    const url = `https://www.uniqjobs.co.in/courses/${course}/${city}`;
     const ogImage = detail?.banner?.bgImageUrl;
 
     return {
@@ -69,9 +69,9 @@ export default async function CityCoursePage({
                     "@type": "Course",
                     "name": `${detail?.title} in ${cityName}`,
                     "description": detail?.subtitle,
-                    "provider": { "@type": "Organization", "name": "UniqJobs", "url": "https://uniqjobs.co.in" },
+                    "provider": { "@type": "Organization", "name": "UniqJobs", "url": "https://www.uniqjobs.co.in" },
                     "areaServed": cityName,
-                    "url": `https://uniqjobs.co.in/courses/${course}/${city}`
+                    "url": `https://www.uniqjobs.co.in/courses/${course}/${city}`
                 })}
             </Script>
             <CourseBanner

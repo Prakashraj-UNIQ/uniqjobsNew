@@ -4,7 +4,7 @@ import { getAllSlugs } from "@/data/course";
 import { COURSE_LOCATIONS, locSlug } from "@/data/courseNav";
 import { listBlogs, listCategories, listTags } from "@/data/blog";
 
-const SITE = "https://uniqjobs.co.in";
+const SITE = "https://www.uniqjobs.co.in";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const slugs = await getAllSlugs();

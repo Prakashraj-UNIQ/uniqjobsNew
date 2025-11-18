@@ -35,14 +35,11 @@ interface Blog {
     image: string;
     schedule_timer: string | Date;
 }
-
+const IMG_BASE = "https://uniqjobs.co.in/blog_images";
 export const revalidate = 300;
 const MAX_DESCRIPTION_LENGTH = 160;
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-
-    const IMG_BASE = "https://uniqjobs.co.in/blog_images/";
-
 
     const { slug } = await params;
     const blog = await getBlog(slug || "");
@@ -54,7 +51,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
             ? originalDescription.slice(0, MAX_DESCRIPTION_LENGTH).trimEnd() + "..."
             : originalDescription;
     const title = blogDetails.title;
-    const url = `https://uniqjobs.co.in/blog/${slug}`;
+    const url = `https://www.uniqjobs.co.in/blog/${slug}`;
     const image = src;
 
     return {
@@ -67,7 +64,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     };
 }
 
-const IMG_BASE = "https://uniqjobs.co.in/blog_images";
+
 
 export default async function BlogDetailsGrid({ params }: { params: { slug?: string } }) {
 
@@ -141,9 +138,9 @@ export default async function BlogDetailsGrid({ params }: { params: { slug?: str
                     "dateModified": blogDetails.schedule_timer ?? blogDetails.schedule_timer,
                     "articleSection": blogDetails.category,
                     "keywords": blogDetails.tags?.join(", "),
-                    "mainEntityOfPage": `https://uniqjobs.co.in/blog/${blogDetails.slug}`,
+                    "mainEntityOfPage": `https://wwww.uniqjobs.co.in/blog/${blogDetails.slug}`,
                     "description": blogDetails.description,
-                    "url": `https://uniqjobs.co.in/blog/${blogDetails.slug}`
+                    "url": `https://www.uniqjobs.co.in/blog/${blogDetails.slug}`
                 })}
             </Script>
 
@@ -301,9 +298,9 @@ export default async function BlogDetailsGrid({ params }: { params: { slug?: str
                     "@context": "https://schema.org",
                     "@type": "BreadcrumbList",
                     "itemListElement": [
-                        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://uniqjobs.co.in/" },
-                        { "@type": "ListItem", "position": 2, "name": "Blogs", "item": "https://uniqjobs.co.in/blogs" },
-                        { "@type": "ListItem", "position": 3, "name": blogDetails.title, "item": `https://uniqjobs.co.in/blog/${blogDetails.slug}` },
+                        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.uniqjobs.co.in/" },
+                        { "@type": "ListItem", "position": 2, "name": "Blogs", "item": "https://www.uniqjobs.co.in/blogs" },
+                        { "@type": "ListItem", "position": 3, "name": blogDetails.title, "item": `https://www.uniqjobs.co.in/blog/${blogDetails.slug}` },
                     ],
                 })}
             </Script>

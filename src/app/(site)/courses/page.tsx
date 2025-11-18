@@ -7,7 +7,7 @@ export const revalidate = 3600;
 
 const seoTitle = "Best Software Courses in 2026 | Uniq Jobs"
 const seoDescription = "Explore the most in-demand software courses for 2026, including Full Stack Development, Data Science, AI, DevOps, Cloud, and more. Start you career today."
-const seoUrl = "https://uniqjobs.co.in/courses/"
+const seoUrl = "https://www.uniqjobs.co.in/courses/"
 const seoImg = "/images/clsBala.webp"
 
 export const metadata: Metadata = {

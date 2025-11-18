@@ -7,7 +7,7 @@ export const revalidate = 300;
 export async function generateMetadata() {
   const title = "IT Blogs & Technology | UniqJobs";
   const description = "Explore the latest IT career tips and tricks from UniqJobs experts. Updated weekly with real industry guidance.";
-  const url = "https://uniqjobs.co.in/blogs";
+  const url = "https://www.uniqjobs.co.in/blogs";
   const image = "/images/clsBala.webp";
   const keyWords = ["IT career tips, IT career, experts, guidance, blogs, blog"];
 
@@ -34,8 +34,8 @@ export default async function BlogsPage() {
           "@type": "CollectionPage",
           "name": "UniqJobs Blog",
           "description": "Latest IT tips, tutorials, and career guides.",
-          "url": "https://uniqjobs.co.in/blogs",
-          "publisher": { "@type": "Organization", "name": "UniqJobs", "url": "https://uniqjobs.co.in" }
+          "url": "https://www.uniqjobs.co.in/blogs",
+          "publisher": { "@type": "Organization", "name": "UniqJobs", "url": "https://www.uniqjobs.co.in" }
         })}
       </Script>
 

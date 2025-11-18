@@ -9,7 +9,7 @@ export async function generateMetadata({ searchParams }: { searchParams: { tag?:
   const tagName = tag || "All";
   const title = `${tagName} Articles | Blog | UniqJobs`;
   const description = `Read latest posts and guides related to ${tagName}. Stay updated on ${tagName} topics.`;
-  const url = `https://uniqjobs.co.in/blogs/tags/tag=${tagName}`;
+  const url = `https://www.uniqjobs.co.in/blogs/tags/tag=${tagName}`;
   const image = "/images/clsBala.webp";
 
   return {
@@ -40,7 +40,7 @@ export default async function page({ searchParams }: { searchParams: { tag?: str
           const mainEntity: SchemaBlogPosting[] = data.data.map((p: BlogPost, i: number) => ({
             "@type": "BlogPosting",
             headline: p.title,
-            url: `https://uniqjobs.co.in/blog/${p.slug}`,
+            url: `https://www.uniqjobs.co.in/blog/${p.slug}`,
             position: i + 1,
           }));
 

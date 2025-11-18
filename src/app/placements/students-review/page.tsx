@@ -4,7 +4,7 @@ import Script from "next/script";
 
 const seoTitle = "Student's Review & Placed Candidates | uniq jobs"
 const seoDescription = "Watch genuine students review of Uniq Jobs and discover how our training programs have helped learners build strong careers in IT."
-const seoUrl = "https://uniqjobs.co.in/courses/"
+const seoUrl = "https://www.uniqjobs.co.in/courses/"
 const seoImg = "/images/clsBala.webp"
 const keyWords = ["students review, Non-IT, Freshers, IT career, placements, careers"]
 
@@ -30,19 +30,19 @@ export default function StudentReviewsPage() {
           "@context": "https://schema.org",
           "@type": "CollectionPage",
           "name": "UniqJobs Student Reviews",
-          "url": "https://uniqjobs.co.in/placements/students-review",
+          "url": "https://www.uniqjobs.co.in/placements/students-review",
           "description":
             "Read real reviews and success stories from UniqJobs students placed in IT companies.",
           "about": {
             "@type": "Organization",
             "name": "UniqJobs",
-            "url": "https://uniqjobs.co.in"
+            "url": "https://www.uniqjobs.co.in"
           },
           "mainEntity": {
             "@context": "https://schema.org",
             "@type": "EducationalOrganization",
             "name": "UniqJobs",
-            "url": "https://uniqjobs.co.in",
+            "url": "https://www.uniqjobs.co.in",
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.8",

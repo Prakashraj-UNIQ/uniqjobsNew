@@ -11,7 +11,7 @@ const ShortsSection = dynamic(() => import("@/components/shorts/ShortsSection"))
 
 const seoTitle = "Best Software Training with Placement Institute in chennai | UniqJobs"
 const seoDescription = "Start your IT career with UniqJobs in Chennai. Get real-time project training from industry experts and benefit from 100% placement assistance."
-const seoUrl = "https://uniqjobs.co.in/"
+const seoUrl = "https://www.uniqjobs.co.in/"
 const seoImg = "/images/cta-cover.webp"
 const keyWords = ["Career gap, Non-IT, Freshers, IT career, placements"]
 
@@ -34,21 +34,21 @@ export default async function Home() {
           "@graph": [
             {
               "@type": "WebSite",
-              "@id": "https://uniqjobs.co.in/#website",
+              "@id": "https://www.uniqjobs.co.in/#website",
               "name": "UniqJobs",
-              "url": "https://uniqjobs.co.in",
+              "url": "https://www.uniqjobs.co.in",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://uniqjobs.co.in/search?q={search_term_string}",
+                "target": "https://www.uniqjobs.co.in/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             },
             {
               "@type": "Organization",
-              "@id": "https://uniqjobs.co.in/#organization",
+              "@id": "https://www.uniqjobs.co.in/#organization",
               "name": "UniqJobs",
-              "url": "https://uniqjobs.co.in",
-              "logo": "https://uniqjobs.co.in/uniqjobs.svg",
+              "url": "https://www.uniqjobs.co.in",
+              "logo": "/uniqjobs.svg",
               "sameAs": [
                 "https://www.youtube.com/@uniqtechnologiesofficial",
                 "https://www.instagram.com/uniqtechs",

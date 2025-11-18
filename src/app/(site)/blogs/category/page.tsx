@@ -14,7 +14,7 @@ export async function generateMetadata({
 
   const title = `${cat} Articles | Blog | UniqJobs`;
   const description = `Read latest posts and guides related to ${cat}. Stay updated on ${cat} topics.`;
-  const url = `https://uniqjobs.co.in/blogs/categories/category=${cat}`;
+  const url = `https://www.uniqjobs.co.in/blogs/categories/category=${cat}`;
   const image = "/images/clsBala.webp";
 
   return {
@@ -78,7 +78,7 @@ export default async function Page({
             (p, i: number) => ({
               "@type": "BlogPosting",
               headline: p.title,
-              url: `https://uniqjobs.co.in/blog/${p.slug}`,
+              url: `https://www.uniqjobs.co.in/blog/${p.slug}`,
               position: i + 1,
             })
           );
