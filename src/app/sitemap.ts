@@ -4,100 +4,104 @@ import { getAllSlugs } from "@/data/course";
 import { COURSE_LOCATIONS, locSlug } from "@/data/courseNav";
 import { listBlogs, listCategories, listTags } from "@/data/blog";
 
+// simple slugify
+const slugify = (str: string) =>
+  str
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+
 const SITE = "https://www.uniqjobs.co.in";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const now = new Date();
+
+  /* ------------------ STATIC PAGES ------------------ */
+  const staticPages: MetadataRoute.Sitemap = [
+    {
+      url: `${SITE}/`,
+      lastModified: now,
+      changeFrequency: "daily",
+      priority: 1.0,
+    },
+    { url: `${SITE}/contact-us`, lastModified: now },
+    { url: `${SITE}/placements/students-review`, lastModified: now },
+    { url: `${SITE}/courses`, lastModified: now },
+    { url: `${SITE}/blogs`, lastModified: now },
+  ];
+
+  /* ------------------ COURSES ------------------ */
   const slugs = await getAllSlugs();
 
-  const homePage: MetadataRoute.Sitemap = [
-  { 
-    url: `${SITE}/`, 
-    lastModified: new Date(), 
-    changeFrequency: "daily",
-    priority: 1.0 
-  }
-];
-
-  const contactPage: MetadataRoute.Sitemap = [
-    { url: `${SITE}/contact-us`, lastModified: new Date() },
-  ];
-  const studentsReviewPage: MetadataRoute.Sitemap = [
-    { url: `${SITE}/placements/students-review`, lastModified: new Date() },
-  ];
-
-  const courseBase: MetadataRoute.Sitemap = [
-    { url: `${SITE}/courses`, lastModified: new Date() },
-  ];
-
   const coursePages = slugs.map((course) => ({
-    url: `${SITE}/courses/${course}`, 
-    lastModified: new Date(),
+    url: `${SITE}/courses/${course}`,
+    lastModified: now,
   }));
 
   const cityPages = slugs.flatMap((course) =>
     (COURSE_LOCATIONS[course] ?? []).map((city) => ({
       url: `${SITE}/courses/${course}/${locSlug(city)}`,
-      lastModified: new Date(),
+      lastModified: now,
     }))
   );
 
-  const now = new Date();
-  const postsRes = await listBlogs(1, 50); 
-  if (!Array.isArray(postsRes.posts)) return [];       
-  const posts = postsRes.posts ?? [];
-  const cats = await listCategories();
-  const tags = await listTags();
-
+  /* ------------------ BLOG POSTS ------------------ */
+  const postRes = await listBlogs(1, 50);
+  const posts = Array.isArray(postRes.posts) ? postRes.posts : [];
   interface BlogPost {
     slug: string;
     updatedAt?: string;
     publishedAt?: string;
   }
 
-  interface Category {
-    slug?: string;
-    name: string;
-  }
-
-  interface Tag {
-    slug?: string;
-    name: string;
-  }
-
-  const blogBase: MetadataRoute.Sitemap = [
-    { url: `${SITE}/blogs`, lastModified: now },
-  ];
-
   const postUrls = posts.map((p: BlogPost) => ({
     url: `${SITE}/blog/${p.slug}`,
-    lastModified: p.updatedAt ? new Date(p.updatedAt) : new Date(p.publishedAt || now),
+    lastModified: p.updatedAt
+      ? new Date(p.updatedAt)
+      : new Date(p.publishedAt || now),
     changeFrequency: "weekly" as const,
     priority: 0.8,
   }));
 
-  const catUrls = (cats ?? []).map((c: Category) => ({
-    url: `${SITE}/blogs/category/?category=${encodeURIComponent(c.slug ?? c.name)}`,
-    lastModified: now,
-    changeFrequency: "weekly" as const,
-    priority: 0.6,
-  }));
+  /* ------------------ CATEGORIES ------------------ */
+  const catRes = await listCategories();
+  const categories = catRes?.data ?? [];
 
-  const tagUrls = (tags ?? []).map((t: Tag) => ({
-    url: `${SITE}/blogs/tag/?tag=${encodeURIComponent(t.slug ?? t.name)}`,
-    lastModified: now,
-    changeFrequency: "weekly" as const,
-    priority: 0.5,
-  }));
+  const catUrls = categories.map(
+    (c: string | { name: string; slug?: string }) => {
+      const slug =
+        typeof c === "string" ? slugify(c) : c.slug || slugify(c.name);
 
+      return {
+        url: `${SITE}/blogs/category/?category=${encodeURIComponent(slug)}`,
+        lastModified: now,
+        changeFrequency: "weekly" as const,
+        priority: 0.6,
+      };
+    }
+  );
 
+  /* ------------------ TAGS ------------------ */
+  const tagRes = await listTags();
+  const tags = tagRes?.data ?? [];
+
+  const tagUrls = tags.map((t: string | { name: string; slug?: string }) => {
+    const slug = typeof t === "string" ? slugify(t) : t.slug || slugify(t.name);
+
+    return {
+      url: `${SITE}/blogs/tags/?tag=${encodeURIComponent(slug)}`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.5,
+    };
+  });
+
+  /* ------------------ FINAL RETURN ------------------ */
   return [
-    ...homePage,
-    ...contactPage,
-    ...studentsReviewPage,
-    ...courseBase,
+    ...staticPages,
     ...coursePages,
     ...cityPages,
-    ...blogBase,
     ...postUrls,
     ...catUrls,
     ...tagUrls,
