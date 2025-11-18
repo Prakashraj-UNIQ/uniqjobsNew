@@ -33,7 +33,7 @@ const ContactLabel = () => {
                             </div>
                         </div>
                         <div className="ml-3">
-                            <h6 className="md:text-lg font-medium text-gray-800">Email</h6>
+                            <h4 className="md:text-lg font-medium text-gray-800">Email</h4>
                             <a
                                 href="mailto:info@uniqtechnologies.co.in?subject=Hello&body=I%20want%20to%20contact%20you"
                                 className="text-black hover:text-red-400 transition"
@@ -64,7 +64,7 @@ const ContactLabel = () => {
                             </div>
                         </div>
                         <div className="ml-3">
-                            <h6 className="md:text-xl font-medium text-gray-800">Phone</h6>
+                            <h4 className="md:text-xl font-medium text-gray-800">Phone</h4>
                             <a
                                 href="tel:+9600114466"
                                 className="text-black hover:text-red-400 transition"
@@ -110,9 +110,9 @@ const ContactLabel = () => {
                             </div>
                         </div>
                         <div className="ml-3 w-100">
-                            <h6 className="md:text-xl font-medium text-gray-800">
+                            <h4 className="md:text-xl font-medium text-gray-800">
                                 Main Branch Address
-                            </h6>
+                            </h4>
                             <a
                                 href="https://maps.app.goo.gl/thg9aZn4NXCxH1MR6?g_st=aw"
                                 target="_blank"

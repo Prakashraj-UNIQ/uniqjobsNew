@@ -18,9 +18,9 @@ export default function CourseCard({ courseTitle, courseSalary, courseDescriptio
                     <h3 className="text-xl text-gray-800 font-primary font-bold mb-1">
                         {courseTitle}
                     </h3>
-                    <h4 className="text-zinc-600 text-base">
+                    <p className="text-zinc-600 text-base">
                         Avg Salary: <span className="text-zinc-200 font-bold" /> {courseSalary}
-                    </h4>
+                    </p>
 
                     <div className="sm:opacity-0 group-hover:opacity-100 transition-all group-hover:delay-300 duration-300 ease-in">
                         <p className="mt-4 text-red-900 font-secondary font-medium max-w-sm">
@@ -28,7 +28,7 @@ export default function CourseCard({ courseTitle, courseSalary, courseDescriptio
                         </p>
                     </div>
                         
-                    <Button href={cta.href} className="mt-4" variants="filedBlackMin">
+                    <Button ariaLabel={`Learn more about ${courseTitle}`} href={cta.href} className="mt-4" variants="filedBlackMin">
                         {cta.label}
                     </Button>
 
