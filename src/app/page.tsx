@@ -18,9 +18,9 @@ const keyWords = ["Career gap, Non-IT, Freshers, IT career, placements"]
 export const metadata: Metadata = {
   title: seoTitle,
   description: seoDescription,
-  keywords:keyWords,
+  keywords: keyWords,
   alternates: { canonical: seoUrl },
-  openGraph: { title: seoTitle, description: seoDescription, url: seoUrl, images: [{ url: seoImg }], type :"website" },
+  openGraph: { title: seoTitle, description: seoDescription, url: seoUrl, images: [{ url: seoImg }], type: "website" },
   twitter: { card: "summary_large_image", title: seoTitle, description: seoDescription, images: [seoImg] },
 };
 
@@ -51,11 +51,13 @@ export default async function Home() {
               "logo": "/uniqjobs.svg",
               "sameAs": [
                 "https://www.youtube.com/@uniqtechnologiesofficial",
+                "https://in.linkedin.com/company/uniq-technologies",
                 "https://www.instagram.com/uniqtechs",
                 "https://www.facebook.com/uniqtechnologies",
                 "https://t.me/uniqtechnologies",
                 "https://t.me/uniqtechnologiestechsupport",
-                "https://www.whatsapp.com/channel/0029VaVHxq18fewtwSwKdo3h"
+                "https://www.whatsapp.com/channel/0029VaVHxq18fewtwSwKdo3h",
+                "https://x.com/UNIQTechs"
               ]
             }
           ]
