@@ -32,7 +32,7 @@ export default function RootLayout({
       <link rel="preconnect" href="https://www.youtube-nocookie.com" />
       <link rel="dns-prefetch" href="https://i.ytimg.com" />
       <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
-      <Script id="meta-pixel" strategy="afterInteractive">
+      <Script id="facebook-pixel" strategy="afterInteractive">
         {`
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -42,10 +42,11 @@ export default function RootLayout({
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '250283863265561');
+    fbq('init', '1001793127169087');
     fbq('track', 'PageView');
   `}
       </Script>
+
 
 
       <body className={`${outFit.className} `}>
@@ -59,10 +60,14 @@ export default function RootLayout({
         <GlobalContactTrigger />
         <CtaBanner />
         <Footer />
-
         <noscript>
-          <img height="1" width="1" style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=250283863265561&ev=PageView&noscript=1"
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            alt=""
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=1001793127169087&ev=PageView&noscript=1"
           />
         </noscript>
         <meta name="google-site-verification" content="mAXpmRzrPAJC52YoePoq9bTX2OUpTJL1oOS69lYmnX0" />
