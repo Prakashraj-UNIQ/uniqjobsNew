@@ -75,7 +75,7 @@ export default function SyllabusSection({ MODULES }: { MODULES: Module[] }) {
 
                             <span
                                 aria-hidden
-                                className="pointer-events-none absolute left-3 top-0 h-[95%] w-px bg-gradient-to-b from-red-500/70 via-red-500/30 to-transparent z-46"
+                                className="pointer-events-none absolute left-3 top-0 h-[95%] w-px bg-gradient-to-b from-red-500/70 via-red-500/30 to-transparent z-48"
                             />
 
                             {MODULES.map((m: Module, idx: number) => (
