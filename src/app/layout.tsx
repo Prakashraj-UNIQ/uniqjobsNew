@@ -8,7 +8,6 @@ import Footer from "@/components/layout/Footer";
 import { Metadata } from "next";
 import ScrollToTop from "@/components/common/ScrollToTop"
 import GlobalContactTrigger from "@/components/layout/GlobalContactTrigger";
-import Script from "next/script";
 
 const outFit = Outfit({
   subsets: ["latin"],
@@ -32,23 +31,6 @@ export default function RootLayout({
       <link rel="preconnect" href="https://www.youtube-nocookie.com" />
       <link rel="dns-prefetch" href="https://i.ytimg.com" />
       <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
-      <Script id="facebook-pixel" strategy="afterInteractive">
-        {`
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1001793127169087');
-    fbq('track', 'PageView');
-  `}
-      </Script>
-
-
-
       <body className={`${outFit.className} `}>
 
         <Header />
@@ -60,17 +42,6 @@ export default function RootLayout({
         <GlobalContactTrigger />
         <CtaBanner />
         <Footer />
-        <noscript>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            alt=""
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=1001793127169087&ev=PageView&noscript=1"
-          />
-        </noscript>
-        <meta name="google-site-verification" content="mAXpmRzrPAJC52YoePoq9bTX2OUpTJL1oOS69lYmnX0" />
       </body>
     </html>
   );
