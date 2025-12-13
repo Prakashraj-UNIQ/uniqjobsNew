@@ -1,5 +1,6 @@
 import TimeAgo from "@/components/common/TimeAgo";
 import { getBlog } from "@/data/blog";
+import { notFound } from "next/navigation";
 import Script from "next/script";
 import Image from "next/image";
 import Breadcrumbs from "@/components/blog/Breadcrumbs";
@@ -71,9 +72,7 @@ export default async function BlogDetailsGrid({ params }: { params: { slug?: str
     const { slug } = await params;
     const blog = await getBlog(slug || "");
     const blogDetails: Blog = blog.data;
-    if (!blogDetails) {
-        return <div className="py-6">Blog not found.</div>;
-    }
+    if (!blogDetails) return notFound();
     const src = blogDetails.image ? `${IMG_BASE}/${encodeURIComponent(blogDetails.image)}` : "";
 
 

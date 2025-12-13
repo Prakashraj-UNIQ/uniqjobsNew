@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import cardDetails from "@/content/courses/index.json";
 
 export default function ContactForm({ onClose }: { onClose?: () => void }) {
@@ -62,12 +62,22 @@ export default function ContactForm({ onClose }: { onClose?: () => void }) {
       setLoading(false);
     }
   };
+  useEffect(() => {
+    if (typeof window === "undefined") return;
 
+    const originalOverflow = document.body.style.overflow;
+
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, []);
   return (
     <>
       {/* Overlay */}
       <div
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50"
         onClick={onClose}
       />
 

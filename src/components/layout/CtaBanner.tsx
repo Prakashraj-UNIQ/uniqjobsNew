@@ -7,10 +7,10 @@ export default function ctaBanner() {
             <div className="relative overflow-hidden w-full h-[350px]">
 
                 <Image
-                    src="/images/cta-cover.webp"
+                    src="/images/classrooms/class6.webp"
                     alt="Call to action | uniq jobs"
                     fill
-                    className="object-cover object-[center_35%] z-0 opacity-90"
+                    className="object-cover object-[center_60%] z-0"
                     priority
                     sizes="100vw"
                 />

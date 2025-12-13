@@ -4,9 +4,9 @@
   "title": "Master Data Engineering with UNIQ Technologies",
   "subtitle": "Become an industry-ready Data Engineer with UNIQ Technologies. This course covers Python, SQL, Big Data, Hadoop, Spark, Data Warehousing, ETL Pipelines, Cloud Data Engineering, and Real-Time Streaming Systems. Ideal for freshers, software developers, and professionals looking to transition into Data Engineering roles.",
   "banner": {
-    "bgImageUrl": "/images/clsBala.webp",
-    "youtubeId": "aAp40dQXPSk",
-    "applyHref": "/contactus"
+    "bgImageUrl": "/images/classrooms/class4.webp",
+    "youtubeId": "",
+    "applyHref": "/contact-us"
   },
   "afterCompleted": {
     "title": "Job Opportunities After Data Engineering Course",

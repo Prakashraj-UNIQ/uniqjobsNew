@@ -35,9 +35,9 @@ export async function generateMetadata({ params }: { params: Promise<{ course: s
 export default async function CoursePage({ params }: { params: Promise<{ course: string }> }) {
   const { course } = await params;
   const detail = await getCourseDetail(course);
+  if (!detail) return notFound();
   const syllabus = await loadSyllabus(course);
 
-  if (!detail) return notFound();
 
   return (
     <>

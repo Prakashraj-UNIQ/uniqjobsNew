@@ -75,20 +75,20 @@ export default function SyllabusSection({ MODULES }: { MODULES: Module[] }) {
 
                             <span
                                 aria-hidden
-                                className="pointer-events-none absolute left-3 top-0 h-[95%] w-px bg-gradient-to-b from-red-500/70 via-red-500/30 to-transparent z-48"
+                                className="pointer-events-none absolute left-3 top-0 h-[95%] w-px bg-gradient-to-b from-red-500/70 via-red-500/50 to-red-500/30 z-48"
                             />
 
                             {MODULES.map((m: Module, idx: number) => (
                                 <li key={m.id} className="relative">
 
-                                    <span className="absolute -left-[2px] top-3 inline-flex h-6 w-6 items-center justify-center rounded-full bg-red-600 text-[11px] font-bold shadow ring-2 ring-black/30 z-48">
+                                    <span className="absolute -left-[2px] top-3 inline-flex h-6 w-6 items-center justify-center rounded-full bg-red-600 text-[11px] font-bold shadow ring-2 ring-black/30 z-49">
                                         {m.id}
                                     </span>
 
                                     <div
                                         data-module-card
                                         style={{
-                                            zIndex: 50 - idx,
+                                            zIndex: 45 - idx,
                                             top: `calc(var(--stack-top) + ${((idx) * (idx + 1)) / 2} * var(--stack-unit))`,
                                         } as React.CSSProperties}
                                         className="sticky"
@@ -96,7 +96,7 @@ export default function SyllabusSection({ MODULES }: { MODULES: Module[] }) {
                                     >
                                         <div
                                             data-module-inner
-                                            className="translate-y-6 opacity-0 will-change-transform transition-all duration-700 rounded-2xl border border-gray-500/20 bg-white/5 p-5 shadow-[0_6px_24px_rgba(0,0,0,0.35)] backdrop-blur hover:border-gray-500/40">
+                                            className="translate-y-6 opacity-0 will-change-transform transition-all duration-700 rounded-2xl border border-gray-500/40 bg-white/5 p-5 shadow-[0_6px_24px_rgba(0,0,0,0.35)] backdrop-blur hover:border-gray-500/40">
                                             <div className="mb-2 flex items-center justify-between">
                                                 <h3 className="text-lg font-semibold text-white">
                                                     {m.title} <span className="text-white/60">· {m.subtitle}</span>
@@ -113,7 +113,7 @@ export default function SyllabusSection({ MODULES }: { MODULES: Module[] }) {
                                                         className="flex translate-y-2 items-start gap-2 opacity-0 transition-all duration-500"
                                                     >
                                                         <Check className="mt-[2px] h-4 w-4 flex-none text-red-400" />
-                                                        <span className="text-sm text-white/90">{p.text}</span>
+                                                        <span className="text-base text-white/90">{p.text}</span>
                                                     </li>
                                                 ))}
                                             </ul>

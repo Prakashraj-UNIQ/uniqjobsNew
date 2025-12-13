@@ -10,7 +10,7 @@ export default function Banner() {
 
                 <div className="absolute inset-0 -z-9">
                     <Image
-                        src="/images/cta-cover.webp"
+                        src="/images/clsbala.webp"
                         alt="UniqJobs - Software Training Institute"
                         fill
                         className="object-cover object-[center_40%]"

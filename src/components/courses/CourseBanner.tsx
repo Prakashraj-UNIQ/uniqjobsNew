@@ -41,6 +41,8 @@ export default function CourseBanner({
         first?.focus();
     }, [open]);
 
+
+
     return (
         <section id="hero" className="relative w-full overflow-hidden pt-10 md:pt-0">
 
@@ -57,7 +59,7 @@ export default function CourseBanner({
                     <div className="h-full w-full bg-gradient-to-br from-indigo-700 via-purple-700 to-fuchsia-600" />
                 )}
 
-                <div className="absolute inset-0 bg-black/80" />
+                <div className="absolute inset-0 bg-black/70" />
             </div>
 
             <div className="mx-auto flex min-h-[58svh] max-w-7xl flex-col items-center justify-center px-4 py-16 text-center text-white sm:px-6 lg:px-8">
@@ -74,7 +76,7 @@ export default function CourseBanner({
 
                 <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
                     <Link
-                        href={applyHref || "/contactus"}
+                        href={applyHref || "/contact-us"}
                         className="group relative inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 font-semibold text-gray-900 shadow-lg shadow-black/20 transition-all hover:shadow-xl hover:shadow-black/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                         aria-label="Apply Now"
                     >
@@ -89,22 +91,25 @@ export default function CourseBanner({
                         Apply Now
                     </Link>
 
-                    <button
-                        onClick={() => setOpen(true)}
-                        className="inline-flex items-center  pulse-wave justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-5 py-3 font-semibold text-white backdrop-blur transition-all hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
-                        aria-haspopup="dialog"
-                        aria-expanded={open}
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            className="h-5 w-5"
+                    {youtubeId?.trim() && (
+                        <button
+                            onClick={() => setOpen(true)}
+                            className="inline-flex items-center pulse-wave justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-5 py-3 font-semibold text-white backdrop-blur transition-all hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+                            aria-haspopup="dialog"
+                            aria-expanded={open}
                         >
-                            <path d="M8 5v14l11-7Z" />
-                        </svg>
-                        Course Overview
-                    </button>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                className="h-5 w-5"
+                            >
+                                <path d="M8 5v14l11-7Z" />
+                            </svg>
+                            Course Overview
+                        </button>
+                    )}
+
 
                 </div>
 
@@ -124,7 +129,7 @@ export default function CourseBanner({
                 </div>
             </div>
 
-            {open && (
+            {open && youtubeId?.trim() && (
                 <div
                     role="dialog"
                     aria-modal="true"
@@ -191,3 +196,5 @@ function StarHalf() {
         </svg>
     );
 }
+
+

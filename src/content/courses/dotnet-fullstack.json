@@ -4,9 +4,9 @@
   "title": "Master .NET Full Stack Development with UNIQ Technologies",
   "subtitle": "Become a professional .NET Full Stack Developer with UNIQ Technologies. Learn C#, .NET Core (ASP.NET Core), Entity Framework, SQL Server, REST APIs, and frontend development with React. This hands-on course prepares you to build scalable full-stack applications and become industry-ready with real-time project experience and placement support.",
   "banner": {
-    "bgImageUrl": "/images/clsBala.webp",
+    "bgImageUrl": "/images/classrooms/class8.webp",
     "youtubeId": "QtMPg-LfIqM",
-    "applyHref": "/contactus"
+    "applyHref": "/contact-us"
   },
   "afterCompleted": {
     "title": "Job Opportunities after .NET Full Stack Course",

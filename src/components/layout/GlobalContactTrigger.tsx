@@ -6,30 +6,16 @@ export default function GlobalContactTrigger() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const hero = document.getElementById("hero");
-    if (!hero) return;
+    // prevent showing again on the SAME page
+    if (sessionStorage.getItem("contactFormShown")) return;
 
-    const io = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        setVisible(entry.intersectionRatio === 0);
-      },
-      { root: null, threshold: [0, 0.1] }
-    );
+    const timer = setTimeout(() => {
+      setVisible(true);
+      sessionStorage.setItem("contactFormShown", "true");
+    }, 15000); 
 
-    io.observe(hero);
-    return () => io.disconnect();
+    return () => clearTimeout(timer);
   }, []);
 
-  return (
-    <>
-      {visible && (
-        <div className="fixed right-6 bottom-6 z-50">
-          <div className="p-2 bg-white rounded-lg shadow-lg">
-            <ContactForm onClose={() => setVisible(false)} />
-          </div>
-        </div>
-      )}
-    </>
-  );
+  return <>{visible && <ContactForm onClose={() => setVisible(false)} />}</>;
 }

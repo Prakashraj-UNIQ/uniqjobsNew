@@ -4,9 +4,9 @@
   "title": "DevOps Training by UNIQ Technologies",
   "subtitle": "Become a job-ready DevOps Engineer with hands-on training in CI/CD, Docker, Kubernetes, Linux, Git, Jenkins, Ansible, Terraform, AWS Cloud, and Monitoring tools. Master real-time automation workflows and deployment pipelines used by top MNCs.",
   "banner": {
-    "bgImageUrl": "/images/clsBala.webp",
-    "youtubeId": "KQGozanMRL0",
-    "applyHref": "/contactus"
+    "bgImageUrl": "/images/classrooms/class6.webp",
+    "youtubeId": "43JOY1mCrVY",
+    "applyHref": "/contact-us"
   },
   "afterCompleted": {
     "title": "Job Opportunities After DevOps Course",
