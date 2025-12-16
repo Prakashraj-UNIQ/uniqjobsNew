@@ -15,6 +15,8 @@ export default function Banner() {
                         fill
                         className="object-cover object-[center_40%]"
                         priority
+                        fetchPriority="high"
+                        quality={65}
                         sizes="100vw"
                     />
                 </div>

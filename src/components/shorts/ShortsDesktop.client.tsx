@@ -41,6 +41,8 @@ function ShortCard({
                     src={item.thumb}
                     alt={item.title ?? item.name ?? "short | uniq jobs"}
                     fill
+                    priority
+                    fetchPriority="high"
                     sizes="250px"
                     className="object-cover"
                 />
@@ -75,7 +77,7 @@ export default function ShortsDesktop({
 
     return (
         <div className="relative mx-auto max-w-screen-2xl grid lg:grid-cols-8 gap-8 w-full px-6">
-            
+
             <aside className="sticky top-10 self-start hidden lg:flex col-span-2 pb-20">
                 <div className="h-[90vh] w-full rounded-2xl overflow-hidden glass-card border border-white/10">
                     <YouTubeEmbed id={active.id} title={active.title} />

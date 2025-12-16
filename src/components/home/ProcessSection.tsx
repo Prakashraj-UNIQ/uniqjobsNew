@@ -24,7 +24,7 @@ const cards: Card[] = [
       "Receive continuous mentorship and performance reviews",
       "Get placement support through mock interviews and job drives",
     ],
-    img: "offlinePlacement.png",
+    img: "offlinePlacement.webp",
   },
   {
     title: "Direct Placement",
@@ -37,7 +37,7 @@ const cards: Card[] = [
       "Get shortlisted by hiring partners",
       "Attend direct interviews — no training required",
     ],
-    img: "directPlacement.png",
+    img: "directPlacement.webp",
   },
 ];
 
@@ -113,7 +113,7 @@ const AutoAnimatedCards: React.FC = () => {
               }}
               onMouseLeave={() => setIsHovered(false)}
               className={`
-    group rounded-2xl border border-gray-500/20 bg-[#101010]
+    group rounded-2xl border border-gray-500/50 bg-[#101010]
     shadow-[0_6px_24px_rgba(0,0,0,0.35)] backdrop-blur
     hover:border-gray-500/40 relative flex justify-between
     transition-all duration-300 ease-out h-[370px] xl:h-[350px]
@@ -161,12 +161,12 @@ const AutoAnimatedCards: React.FC = () => {
                   className={`transition-all duration-500 w-full flex justify-start ${isActive ? "opacity-100" : "opacity-0"
                     }`}
                 >
-                  <Button variants="outline">Apply Now</Button>
+                   <Link href="contact-us"><Button variants="outline">Apply Now</Button></Link>
                 </div>
               </div>
 
               <div
-                className={`transition-all duration-700 sm:absolute top-50 xl:top-1/2 -translate-y-1/2 right-10 w-64 h-64 ${isActive ? "opacity-100" : "opacity-0"
+                className={`transition-all duration-700 sm:absolute top-50 xl:top-1/2 -translate-y-1/2 right-10 w-64 h-64 ${isActive ? "opacity-100" : "opacity-10"
                   }`}
               >
                 <Image
@@ -174,6 +174,8 @@ const AutoAnimatedCards: React.FC = () => {
                   alt={card.title}
                   width={250}
                   height={250}
+                  sizes="(max-width: 768px) 100vw, 336px"
+                  quality={65}
                 />
               </div>
             </div>
@@ -192,6 +194,7 @@ const AutoAnimatedCards: React.FC = () => {
                 alt={card.title}
                 fill
                 className="object-contain"
+
               />
             </div>
 
