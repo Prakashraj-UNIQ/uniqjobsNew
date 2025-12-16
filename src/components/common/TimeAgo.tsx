@@ -27,7 +27,7 @@ function TimeAgo({ date }: TimeAgoProps) {
         return past.toLocaleDateString();
     };
 
-    return <span className="text-sm text-gray-600">{getTimeAgo()}</span>;
+    return <span className="text-sm text-gray-500 italic">{getTimeAgo()}</span>;
 };
 
 export default TimeAgo;

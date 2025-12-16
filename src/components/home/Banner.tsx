@@ -14,9 +14,6 @@ export default function Banner() {
                         alt="UniqJobs - Software Training Institute"
                         fill
                         className="object-cover object-[center_40%]"
-                        priority
-                        fetchPriority="high"
-                        quality={65}
                         sizes="100vw"
                     />
                 </div>

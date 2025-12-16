@@ -29,7 +29,7 @@ export default function Button({
     ...props
 }: ButtonProps) {
     const baseStyles =
-        "inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 cursor-pointer";
+        "inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200";
 
     const variant: Record<ButtonVariant, string> = {
         filled: "hover:bg-red-700 px-6 py-2 bg-brandRed text-white rounded-full",

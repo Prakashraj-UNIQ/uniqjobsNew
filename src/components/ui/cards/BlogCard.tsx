@@ -25,8 +25,6 @@ function BlogCard({ title, duration, img, slug }: BlogCardProps) {
                         height={70}
                         width={70}
                         src={src}
-                        priority
-                        fetchPriority="high"
                         alt={title || "Blog image"}
                         unoptimized
                     />

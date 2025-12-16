@@ -161,7 +161,7 @@ const AutoAnimatedCards: React.FC = () => {
                   className={`transition-all duration-500 w-full flex justify-start ${isActive ? "opacity-100" : "opacity-0"
                     }`}
                 >
-                   <Link href="contact-us"><Button variants="outline">Apply Now</Button></Link>
+                  <Button variants="outline">Apply Now</Button>
                 </div>
               </div>
 
@@ -174,8 +174,6 @@ const AutoAnimatedCards: React.FC = () => {
                   alt={card.title}
                   width={250}
                   height={250}
-                  sizes="(max-width: 768px) 100vw, 336px"
-                  quality={65}
                 />
               </div>
             </div>
@@ -194,7 +192,6 @@ const AutoAnimatedCards: React.FC = () => {
                 alt={card.title}
                 fill
                 className="object-contain"
-
               />
             </div>
 
